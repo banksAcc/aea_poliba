@@ -1,0 +1,138 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PugliaOnTheRoad - La nostra app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<!------Header e barra di navigazione------>
+  <section class="sub-header" id="app">
+    <nav>
+      <a href="index.html"><img src="images/logo_white.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="app.html">LA NOSTRA APP</a></li>
+          <li><a href="index.html#scopri">SCOPRI LA PUGLIA</a></li>
+          <li><a href="contatti.html">CONTATTACI</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="sub-text-box">
+      <h1>La Nostra App</h1>
+    </div>
+  </section>
+
+    <!-------Banner------>
+    <section class="banner">
+      <div class="row">
+        <div class="banner-col">
+          <h1>Cos'è Puglia On The Road</h1>
+          <p>Il turismo è un settore economico fondamentale per l’Italia, che ha vissuto un trend in forte crescita negli ultimi anni, e che la rendono leader mondiale nel settore. La Puglia, in particolare, ha visto nel turismo un comparto in vorticosa crescita.
+Il modo di viaggiare è cambiato radicalmente negli ultimi anni.
+I traveller di oggi amano organizzarsi da sé ed essere attivi sia dalle prime fasi dell’organizzazione sia durante il viaggio vero e proprio. Una travel app, come Puglia on the Road, vuole rappresentare un valido supporto durante ogni tipologia di viaggio.
+L’app, però, cerca di essere un supporto a 360° per il settore turistico pugliese. Motivo per cui Puglia on the Road dà occasione ai professionisti del settore di pubblicizzare le proprie attività commerciali all’interno dell’applicazione
+</p>
+        </div>
+        <div class="banner-col">
+          <img src="images/turismo.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="banner-col">
+          <img src="images/mappa.jpg" alt="">
+        </div>
+        <div class="banner-col">
+          <h2>Per tutti</h2>
+          <h1>Ricerca luoghi di interesse</h1>
+          <p>L’app consente di effettuare la ricerca delle località attraverso il Menù Luoghi accessibile dalla Home mediante il pulsante “Ricerca un luogo di interesse”. Per accedere a questa funzione non è necessario essere registrati.
+Il Menù Luoghi si suddivide in 4 sezioni: Mare, Natura, Cultura e Ristorazione. Cliccando su una di esse verrà visualizzato un elenco con tutti i luoghi, inerenti alla categoria visualizzata, attualmente consultabili sull’app. </p>
+            <a href="video1.html" class="hero-btn blue-btn">GUARDA IL VIDEO</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="banner-col">
+          <h2>Per i turisti</h2>
+          <h1>Programma il tuo itinerario</h1>
+          <p>L’applicazione permette all’utente di programmare il proprio itinerario di viaggio, grazie alla possibilità di salvare in maniera semplice e veloce tutte le attività che si intende svolgere durante il soggiorno.
+È presente un calendario che permette di memorizzare le attività nel giorno scelto.
+Grazie all’integrazione di Google Maps è possibile visualizzare sulla mappa le diverse località.
+</p>
+            <a href="video2.html" class="hero-btn blue-btn">GUARDA IL VIDEO</a>
+        </div>
+        <div class="banner-col">
+          <img src="images/city.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="banner-col">
+          <img src="images/negozi.jpg" alt="">
+        </div>
+        <div class="banner-col">
+          <h2>Per i gestori</h2>
+          <h1>Gestisci le tue attività</h1>
+          <p>L’applicazione permette ad un utente, registratosi come Gestore, di inserire un locale di sua proprietà nell’elenco dei luoghi suggeriti dall’app, dove verrà visualizzato all’interno della specifica categoria.
+Gli attributi da inserire sono Nome, Indirizzo, Telefono, Email, Orari, Sito Web e l'Elenco dei Servizi offerti.
+Il Gestore ha la possibilità di modificare le informazioni relative al proprio locale e di eliminarlo definitivamente quando vuole. Ciò può farlo dal Menù Locali, accessibile solo a lui.
+</p>
+        <a href="video3.html" class="hero-btn blue-btn">GUARDA IL VIDEO</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <h1>Scarica l'app</h1>
+      <p>Download sicuro e veloce</p>
+      </section>
+        <section class="cta" id="app">
+          <h1>Scarica l'app di "Puglia on the Road" <br> sul tuo smartphone</h1>
+          <a href="Puglia_on_the_Road.apk" class="hero-btn" download>Download</a>
+    </section>
+
+
+  <!-------Footer------>
+  <section class="footer">
+    <h4>&copy 2021 Puglia on the Road - Tutti i diritti riservati</h4>
+  </section>
+
+
+<!-------Javascript for Toggle Menu------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+<!-------Javascript for Nav Scroll------>
+<script type="text/javascript">
+      window.addEventListener('scroll', function(){
+          const header = document.querySelector('nav');
+          header.classList.toggle("sticky", window.scrollY > 0)
+      })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

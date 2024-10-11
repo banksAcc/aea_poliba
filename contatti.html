@@ -1,0 +1,104 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PugliaOnTheRoad - Contattaci</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="convalida.js"></script>
+</head>
+<body>
+
+
+<!------Header e barra di navigazione------>
+  <section class="sub-header" id="contact">
+    <nav>
+      <a href="index.html"><img src="images/logo_white.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="app.html">LA NOSTRA APP</a></li>
+          <li><a href="index.html#scopri">SCOPRI LA PUGLIA</a></li>
+          <li><a href="contatti.html">CONTATTACI</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="sub-text-box">
+      <h1>Contattaci</h1>
+    </div>
+  </section>
+
+  <!-------Contact Us------>
+
+  <section class="info" id="info-sito">
+    <h1>Contatta il nostro team</h1>
+    <p>Se sei il proprietario di un'attività nell'ambito del settore turistico in Puglia,
+    e desideri sponsorizzarla, non esitare a contattarci. Lo puoi fare compilando il seguente form
+  o contattandoci direttamente attraverso il nostro indirizzo e-mail.</p>
+  </section>
+
+  <section class="contact-us">
+    <div class="row">
+      <div class="contact-col">
+        <div>
+          <i class="fa fa-envelope-o"></i>
+          <span>
+            <a href= "mailto:pugliaroad.info@gmail.com"><h5>pugliaroad.info@gmail.com</h5></a>
+            <p>Inviaci una e-mail con le info sulla tua attività</p>
+          </span>
+        </div>
+      </div>
+      <div class="contact-col">
+        <form action="form-contatti.php" method="post">
+          <label for="name">Nome e Cognome</label>
+          <input type="text" name="name" id="name" placeholder="Inserisci il tuo nome (obbligatorio)" required>
+          <label for="name">Email</label>
+          <input type="email" name="email" id="email" placeholder="Inserisci il tuo indirizzo email (obbligatorio)" required>
+          <label for="name">La tua attività</label>
+          <input type="text" name="subject" id="subject" placeholder="Inserisci il nome della tua attività (obbligatorio)" required>
+          <label for="name">Messaggio</label>
+          <textarea rows="8" name="message" id="message" placeholder="Messaggio (obbligatorio)" required></textarea>
+          <button type="submit" name="submit" id="submit" class="hero-btn blue-btn">Invia messaggio</button>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <!-------Footer------>
+  <section class="footer">
+    <h4>&copy 2021 Puglia on the Road - Tutti i diritti riservati</h4>
+  </section>
+
+<!-------Javascript for Toggle Menu------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+<script type="text/javascript">
+      window.addEventListener('scroll', function(){
+          const header = document.querySelector('nav');
+          header.classList.toggle("sticky", window.scrollY > 0)
+      })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

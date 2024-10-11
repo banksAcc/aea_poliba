@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PugliaOnTheRoad - Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<!------Header e barra di navigazione------>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo_white.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="app.html">LA NOSTRA APP</a></li>
+          <li><a href="#scopri">SCOPRI LA PUGLIA</a></li>
+          <li><a href="contatti.html">CONTATTACI</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+      <video autoplay muted loop>
+        <source src="video/puglia.mp4" type="video/mp4">
+      </video>
+
+    <div class="text-box">
+      <h1>PUGLIA ON THE ROAD</h1>
+      <p>Porta la Puglia in tasca!</p>
+      <a href="#info-sito" class="hero-btn">Visita il sito</a>
+    </div>
+
+
+
+  </section>
+
+  <!------Sezione Info (Cosa offre il sito)------>
+<section class="info" id="info-sito">
+  <h1>Cosa ti offriamo</h1>
+
+  <div class="row">
+    <div class="info-col">
+      <h3>Scopri la Puglia</h3>
+      <p>Puglia on the Road ti permette di andare alla scoperta dei luoghi più suggestivi della Puglia.
+       Un itinerario con immagini e curiosità sui principali luoghi di interesse pugliesi, suddiviso in quattro sezioni: Mare, Cultura, Natura e Ristorazione.</p>
+    </div>
+    <div class="info-col">
+      <h3>La nostra app</h3>
+      <p>Il sito nasce come supporto alla omonima applicazione.
+      Nella sezione dedicata potrai scoprire in dettaglio le funzioni della nostra app e scaricarla gratutitamente.</p>
+    </div>
+    <div class="info-col">
+      <h3>Contattaci</h3>
+      <p>E' la sezione che ti permette di contattare, attraverso un semplice form da compilare, il team di Puglia on the Road e richiedere la sponsorizzazione della tua attvità sul nostro sito.</p>
+    </div>
+  </div>
+</section>
+
+  <!-------Sezioni (Scopri la Puglia)------>
+  <section class="sezioni" id="scopri">
+    <h1>Scopri la Puglia</h1>
+    <p>Vai alla ricerca dei luoghi e delle specialità culinarie offerte dalla Puglia</p>
+
+    <div class="row">
+      <div class="sezioni-col">
+        <img src="images/mare.jpg">
+        <div class="layer">
+          <a href="mare.html"><h3>MARE</h3></a>
+        </div>
+      </div>
+      <div class="sezioni-col">
+        <img src="images/cultura.jpg">
+        <div class="layer">
+          <a href="cultura.html"><h3>CULTURA</h3></a>
+        </div>
+      </div>
+      <div class="sezioni-col">
+        <img src="images/natura.jpg">
+        <div class="layer">
+          <a href="natura.html"><h3>NATURA</h3></a>
+        </div>
+      </div>
+      <div class="sezioni-col">
+        <img src="images/cibo.jpg">
+        <div class="layer">
+          <a href="ristorazione.html"><h3>RISTORAZIONE</h3></a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+    <!-------Call to Action Pagina APP------>
+    <section class="info">
+      <h1>La nostra app</h1>
+      </section>
+        <section class="cta" id="app">
+          <h1>Scopri le funzioni dell'app "Puglia on the Road" <br>
+            riservate a turisti e gestori</h1>
+          <a href="app.html" class="hero-btn">La nostra app</a>
+    </section>
+
+    <!-------Call to Action Pagina Contattaci------>
+    <section class="info">
+      <h1>Contattaci</h1>
+      </section>
+      <section class="cta">
+        <h1>Contatta il team di "Puglia on the Road" <br>
+          per pubblicizzare la tua attività sul nostro sito</h1>
+        <a href="contatti.html" class="hero-btn">Contattaci</a>
+      </section>
+
+
+  <!-------Footer------>
+  <section class="footer">
+    <h4>&copy 2021 Puglia on the Road - Tutti i diritti riservati</h4>
+  </section>
+
+
+<!-------Javascript for Toggle Menu------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+<script type="text/javascript">
+      window.addEventListener('scroll', function(){
+          const header = document.querySelector('nav');
+          header.classList.toggle("sticky", window.scrollY > 0)
+      })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

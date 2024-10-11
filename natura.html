@@ -1,0 +1,113 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PugliaOnTheRoad - Natura</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<!------Header e barra di navigazione------>
+  <section class="sub-header" id="sezione">
+    <nav>
+      <a href="index.html"><img src="images/logo_white.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="app.html">LA NOSTRA APP</a></li>
+          <li><a href="index.html#scopri">SCOPRI LA PUGLIA</a></li>
+          <li><a href="contatti.html">CONTATTACI</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="sub-text-box" id="about">
+      <h1>Natura</h1>
+      <h2>Goditi i meravigliosi paesaggi naturali pugliesi!</h2>
+    </div>
+  </section>
+
+<!-------Slider------>
+  <section class="sliderGroup">
+      <div id="slider">
+
+          <div class="slides fade">
+            <img src="img/bauxite.jpg" style="width:100%">
+            <div class="tis corsivo">Cava di bauxite</div>
+          </div>
+
+          <div class="slides fade">
+            <img src="img/trullo1.jpg" style="width:100%">
+            <div class="tis corsivo">Valle d'Itria</div>
+          </div>
+
+          <div class="slides fade">
+            <img src="img/ulivi1.jpg" style="width:100%">
+            <div class="tis corsivo">Altopiano delle Murge</div>
+      </div>
+
+      <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+        }
+         slideIndex++;
+         if (slideIndex > slides.length) {slideIndex = 1}
+             slides[slideIndex-1].style.display = "block";
+         setTimeout(showSlides, 4000); 
+        }
+      </script>
+
+  </section>
+  <!-- fine slider -->
+
+<!-------Cards------>
+  <section id="cardZone">
+      <iframe src="cardNatura.html" class="carta" scrolling="auto" frameborder="0"></iframe>
+  </section>
+
+
+
+  <!-------Footer------>
+  <section class="footer">
+    <h4>&copy 2021 Puglia on the Road - Tutti i diritti riservati</h4>
+  </section>
+
+<!-------Javascript for Toggle Menu------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+<script type="text/javascript">
+      window.addEventListener('scroll', function(){
+          const header = document.querySelector('nav');
+          header.classList.toggle("sticky", window.scrollY > 0)
+      })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
